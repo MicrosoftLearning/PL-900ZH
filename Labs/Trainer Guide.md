@@ -4,7 +4,7 @@ lab:
     module: '模块 XX：Power Apps 生成'
 ---
 
-# PL-900：Microsoft-Power-Platform-Fundamentals
+# PL-900：Microsoft Power Platform 基础知识
 ## 培训师指南
 
 # 环境

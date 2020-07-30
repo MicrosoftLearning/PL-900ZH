@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: “实验室 02：画布应用，第 1 部分”
     module: “模块 XX：Power Apps 生成”

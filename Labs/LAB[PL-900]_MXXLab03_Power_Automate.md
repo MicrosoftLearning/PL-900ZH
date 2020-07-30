@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 03：Power Automate'
     module: '模块 XX：Power Apps 生成'

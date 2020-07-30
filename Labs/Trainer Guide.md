@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '培训师指南'
     module: '模块 XX：Power Apps 生成'

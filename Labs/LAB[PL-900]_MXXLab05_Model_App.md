@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 5：模型驱动应用'
     module: '模块 XX：Power Apps 生成'

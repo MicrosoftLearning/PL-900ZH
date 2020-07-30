@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 04：Power BI'
     module: '模块 XX：Power Apps 生成'

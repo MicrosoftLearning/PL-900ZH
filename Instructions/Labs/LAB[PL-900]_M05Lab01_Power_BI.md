@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室：Power BI'
     module: '模块 5：Power BI 入门'

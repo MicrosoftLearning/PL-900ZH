@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 01：数据建模'
     module: '模块 XX：Power Apps 生成'

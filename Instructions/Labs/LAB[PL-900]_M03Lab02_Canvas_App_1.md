@@ -1,10 +1,10 @@
 ﻿---
 lab:
     title: '实验室：画布应用，第 1 部分'
-    module: '模块 3：Power Apps 入门'
+    module: '模块 3: Power Apps 入门'
 ---
 
-# 模块 3：Power Apps 入门
+# 模块 3: Power Apps 入门
 ## 实验室：画布应用，第 1 部分
 
 应用场景
@@ -77,7 +77,7 @@ lab:
 
     1.  单击 **“文件”>“保存”**。
     
-    2.  键入应用名称为**Campus Staff**
+    2.  键入应用名称为 **Campus Staff**
     
     3.  按下 **“保存”**。
 

@@ -1,10 +1,10 @@
 ﻿---
 lab:
     title: '实验室：画布应用，第 2 部分'
-    module: '模块 3：Power Apps 入门'
+    module: '模块 3: Power Apps 入门'
 ---
 
-# 模块 3：Power Apps 入门
+# 模块 3: Power Apps 入门
 ## 实验室：画布应用，第 2 部分
 
 应用场景
@@ -27,7 +27,7 @@ lab:
 -   连接到 Common Data Service，将其作为数据源
 -   捕获输入（访问者代码）并找到访问者记录
 -   配置表单查看器控件以显示访问者信息
--   使用 CDS 视图填充库
+-   使用 Common Data Service 视图填充库
 -   处理访问者的签入和签出流程
 
 

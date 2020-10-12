@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室：Power Automate'
     module: '模块 4: Power Automate 入门'

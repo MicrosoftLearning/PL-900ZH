@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
      title: '实验室 5：如何构建 Power Apps 门户'
      module: '模块 3: Power Apps 入门'

@@ -54,7 +54,7 @@ lab:
 1.  如果尚未安装 Power BI Desktop，请导航至 [https://aka.ms/pbidesktopstore](https://aka.ms/pbidesktopstore) 以下载并安装 Power BI 应用。
 
 > [!重要事项]
-> 如果在使用 Microsoft Store 安装 Power BI Desktop 时遇到问题，请尝试从 [https://aka.ms/pbiSingleInstaller](https://aka.ms/pbiSingleInstaller) 下载的独立安装程序。
+> 如果在使用 Microsoft Store 安装 Power BI Desktop 时遇到问题，请尝试从 [https://aka.ms/pbiSingleInstaller-chs](https://aka.ms/pbiSingleInstaller-chs) 下载的独立安装程序。
 
 2. **如果成功安装了 Power BI Desktop，请跳至 [任务 \#2](#task-2-prepare-data)**。如果你没有安装桌面应用程序所需的权限，或者在运行或配置 Power BI Desktop 时遇到困难，请完成以下任务步骤，然后继续进行[任务 \#3](#task-3-create-chart-and-time-visualizations)，但在整个实验室中不要使用 Power BI Desktop，而是使用联机 Power BI 服务 ([https://app.powerbi.com](https://app.powerbi.com))。 
 

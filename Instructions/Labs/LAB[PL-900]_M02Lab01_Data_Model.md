@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 1： 数据建模'
     module: '模块 2： Common Data Service 简介'

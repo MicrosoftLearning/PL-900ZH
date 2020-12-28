@@ -93,16 +93,16 @@ lab:
         > 需将动态内容置于方括号中命名字段的位置。建议先复制并粘贴所有文本，然后在正确的位置添加动态内容。
    
         ```
-        亲爱的 {First Name}，
+        Dear {First Name},
 
-        现已安排你在 {Scheduled Start} 到 {Scheduled End} 期间访问 Bellows 校园。
+        You are currently scheduled to visit Bellows Campus from {Scheduled Start} until {Scheduled End}.
 
-        你的安全代码为 {Code}，请不要与他人共享。你将需要在访问期间出示此代码。
+        Your security code is {Code}, please do not share it. You will be required to produce this code during your visit.
 
-        此致！
+        Best regards,
 
-        校园管理处
-        Bellows 学院
+        Campus Administration
+        Bellows College
         ```
    
 10.  选择顶部的 **“无标题”** 流名称，并将其重命名为 `Visit notification`
@@ -228,17 +228,17 @@ lab:
 13.  在 **“主题”** 字段中输入以下内容。**“全名”** 是来自 **“获取访客”** 步骤的动态内容。
 
    ```
-   {Full Name} 逗留超时
+   {Full Name} overstayed their welcome
    ```
    
 14.  在 **“正文”** 字段中输入以下内容。 **“名称”** 是来自 **“获取建筑物”** 步骤的动态内容。
 
    ```
-   建筑物 {Name} 中存在逗留
+   There is an overstay in building {Name}
          
-   此致，
+   Best,
          
-   校园安全处
+   Campus Security
    ```
 
 17.  选择左上角的流名称 **“无标题”**，并将其重命名为 **“安全扫描”**

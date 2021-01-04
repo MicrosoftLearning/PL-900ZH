@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 4：如何生成模型驱动应用'
     module: '模块 3： Power Apps 入门'

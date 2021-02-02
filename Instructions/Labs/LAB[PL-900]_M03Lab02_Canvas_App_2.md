@@ -1,4 +1,4 @@
----
+﻿---
 lab:
     title: '实验室 3：如何生成画布应用，第 2 部分'
     module: '模块 3： Power Apps 入门'
@@ -6,6 +6,13 @@ lab:
 
 # 模块 3： Power Apps 入门
 ## 实验室 2：如何生成画布应用，第 2 部分
+
+### 重要通知（2020 年 11 月起生效）：
+Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中的一些术语已更新。例如，“实体”现已更新为“表”。Dataverse 数据库中的“字段”和“记录”现在称为“列”和“行”。
+
+虽然应用程序正在更新其用户体验，但对一些 Microsoft Dataverse 术语（例如“实体”（现在为“表”）、“字段”（现在为“列”）和“记录”（现在为“行”））的引用已过期。请在完成实验室时记住这一点。我们希望很快就能完全更新我们的内容。 
+
+有关详细信息和受影响术语的完整列表，请访问 [Microsoft Dataverse 是什么？](https://docs.microsoft.com/zh-cn/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
 
 # 应用场景
 

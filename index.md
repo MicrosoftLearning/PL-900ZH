@@ -1,4 +1,4 @@
----
+﻿---
 title: 在线托管说明
 permalink: index.html
 layout: home
@@ -6,9 +6,9 @@ layout: home
 
 # 内容目录
 
-以下列出了每个实验练习和演示的超链接。
+以下列出了每个实验室练习和演示的超链接。
 
-## 实验
+## 实验室
 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | 模块 | 实验室 |

@@ -1,22 +1,22 @@
----
+﻿---
 lab:
-    title: '实验室 6：如何生成自动化解决方案'
+    title: '实验室 6：如何构建自动化解决方案'
     module: '模块 4：Power Automate 入门'
 ---
 
 # 模块 4：Power Automate 入门
-## 实验室：如何生成自动化解决方案
+## 实验室：如何构建自动化解决方案
 
-### 重要通知（2020 年 11 月起生效）：
-Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中的一些术语已更新。例如，“实体”现已更新为“表”。Dataverse 数据库中的“字段”和“记录”现在称为“列”和“行”。
+### 重要通知（2020 年 11 月生效）：
+Common Data Service 已重命名为 Microsoft Dataverse。Microsoft Dataverse 中的一些术语已更新。例如，实体现在更新为了表。Dataverse 数据库中的字段和记录现在称为列和行。
 
-虽然应用程序正在更新其用户体验，但对一些 Microsoft Dataverse 术语（例如“实体”（现在为“表”）、“字段”（现在为“列”）和“记录”（现在为“行”））的引用已过期。请在完成实验室时记住这一点。我们希望很快就能完全更新我们的内容。 
+在应用程序更新其用户体验期间，对实体（现在是**表**）、字段（现在是**列**）和记录（现在是**行**）等 Microsoft Dataverse 术语的一些引用可能已过时。请在执行实验室操作时谨记这一点。我们预期将在不久之后更新全部内容。 
 
-有关详细信息和受影响术语的完整列表，请访问 [Microsoft Dataverse 是什么？](https://docs.microsoft.com/zh-cn/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
+有关详细信息以及受影响术语的完整列表，请访问[什么是 Microsoft Dataverse？](https://docs.microsoft.com/zh-cn/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
 
 ## 应用场景
 
-贝洛斯学院 (Bellows College) 是一所教育机构，校园内有多座建筑。当前，校园访客被记录在纸质日记中。无法始终如一地捕获信息，也无法收集和分析有关整个校园的访问数据。 
+Bellows College 是一所教育机构，校园内有多座建筑。当前，校园访客被记录在纸质日记中。无法始终如一地捕获信息，也无法收集和分析有关整个校园的访问数据。 
 
 校园管理部门希望对其访客登记系统进行现代化改造。在该系统中，由安全人员控制对建筑物的访问，所有访问都必须由主办人预先登记和记录。
 
@@ -33,10 +33,10 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
 ## 前提条件
 
-* 完成**模块 0 实验 0 - 验证实验室环境**
-* 完成**模块 2 实验 1 - Common Data Service 简介**
-* 在 **“模块 3 实验室 2 - 如何生成画布应用，第 2 部分”** 中创建的校园职工应用（用于测试）
-* 在 **“模块 3 实验室 4 - 如何生成模型驱动应用”中使用个人电子邮件地址创建的联系人 John Doe** （用于测试）
+* 完成 **“模块 0 实验室 0 - 验证实验室环境”**
+* 完成 **“模块 2 实验室 1 - Microsoft Dataverse 简介”**
+* 在 **“模块 3 实验室 2 - 如何生成画布应用，第 2 部分”** 中创建的 Campus Staff 应用（用于测试）
+* 在 **“模块 3 实验室 4 - 如何生成模型驱动应用”** 中使用个人电子邮件地址创建的联系人 John Doe（用于测试）
 
 ## 开始前要考虑的事项
 
@@ -45,7 +45,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
 # 练习 \#1：创建访问通知流
 
-**目标：** 在本练习中，你将创建一个实现要求的 Power Automate 流。应向访客发送一封电子邮件，其中包含分配给访问的唯一代码。
+**目标：**在本练习中，你将创建一个实现要求的 Power Automate 流。应向访客发送一封电子邮件，其中包含分配给访问的唯一代码。
 
 ## 任务 \#1：创建流
 
@@ -59,35 +59,35 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
     -   单击打开 **“校园管理”** 解决方案。
 
-2.  请单击 **“新建”**，然后选择 **“流”**。这将在新窗口中打开 Power Automate 流编辑器。
+2.  单击 **“新建”**，然后选择 **“云流”**。这将在新窗口中打开 Power Automate 流编辑器。
 
-3. 搜索 *“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。
+3. 搜索*“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。
 
 4. 选择触发器 **“创建、更新或删除记录时”**。
 
    * 为 **“触发条件”** 选择 **“创建”**
    
-   * 为 **“实体名称”** 选择 **“访问”**
+   * 为 **“表名称”** 选择 **“Visits”**
    
    * 为 **“范围”** 选择 **“组织”**
    
-   * 在触发器步骤上，单击省略号 (**...**)，然后单击 **“重命名”**。将此触发器重命名为 **“创建访问时”**。这是一个很好的习惯，这样你和其他流编辑可以理解步骤的目的，而不必深入研究细节。
+   * 在触发步骤上，单击省略号 (**...**)，然后单击 **“重命名”**。将此触发器重命名为 **“创建访问时”**。这是一个很好的习惯，这样你和其他流编辑可以理解步骤的目的，而不必深入研究细节。
 
 5.  单击 **“新建步骤”**。必须执行此步骤来检索访客信息，包括电子邮件地址。
 
 6. 搜索 *“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。
 
-7. 选择 **“获取记录”** 操作。 
+7. 选择 **“按 ID 获取行”** 操作。 
 
-   * 选择 **“联系人”** 作为 **“实体名称”**
+   * 选择 **“Contacts”** 作为 **“表名称”**
    
-   * 在 **“项目 ID”** 字段中，选择动态内容列表中的 **“访客（值）”**。
+   * 在 **“行 ID”** 字段中，选择动态内容列表中的 **“访客(值)”**。
    
    * 在此操作上，单击省略号 (**...**)，然后单击 **“重命名”**。将此操作重命名为 **“获取访客”**。这是一个很好的习惯，这样你和其他流编辑可以理解步骤的目的，而不必深入研究细节。
 
 8. 单击 **“新建步骤”**。这是创建并向访客发送电子邮件的步骤。
 
-9. 搜索 *“邮件”*， 选择 **“邮件”** 连接器和 **“发送电子邮件通知”** 操作 
+9. 搜索*“邮件”*， 选择 **“邮件”** 连接器和 **“发送电子邮件通知”** 操作 
 
    * 如果要求接受使用此操作的条款和条件，请单击 **“接受”**。
    
@@ -100,16 +100,16 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
         > 需将动态内容置于方括号中命名字段的位置。建议先复制并粘贴所有文本，然后在正确的位置添加动态内容。
    
         ```
-        Dear {First Name},
+        亲爱的 {First Name}，
 
-        You are currently scheduled to visit Bellows Campus from {Scheduled Start} until {Scheduled End}.
+        现已安排你在 {Scheduled Start} 到 {Scheduled End} 期间访问 Bellows 校园。
 
-        Your security code is {Code}, please do not share it. You will be required to produce this code during your visit.
+        你的安全代码为 {Code}，请不要与他人共享。你将需要在访问期间出示此代码。
 
-        Best regards,
+        此致！
 
-        Campus Administration
-        Bellows College
+        校园管理处
+        Bellows 学院
         ```
    
 10.  选择顶部的 **“无标题”** 流名称，并将其重命名为 `Visit notification`
@@ -118,7 +118,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
     将此流选项卡保持打开状态以用于下一个任务。流大致如下所示：
 
-![Power Automate 访客通知流](media/4-power-automate-notify.png)
+![Power Automate 访客通知流](media/4-power-automate-notification.png)
 
 ## 任务 \#2：验证并测试流
 
@@ -128,7 +128,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
 3.  保持此选项卡处于打开状态，然后导航回到上一个流选项卡。 
 
-4.  在命令栏上，单击 **“测试”**。选择 **“我将执行触发器操作”**，然后选择 **“保存并测试”**。
+4.  在命令栏上，单击 **“测试”**。选择 **“手动”**，然后选择 **“保存并测试”**。
 
 5.  保持流选项卡处于打开状态，然后使用 **Campus Staff** 应用导航回上一个选项卡。
 
@@ -168,19 +168,19 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
    -   单击打开 **“校园管理”** 解决方案。
 
-2. 请单击 **“新建”**，然后选择 **“流”**。这将在新窗口中打开 Power Automate 流编辑器。
+2. 单击 **“新建”**，然后选择 **“云流”**。这将在新窗口中打开 Power Automate 流编辑器。
 
-3. 搜索 *“定期”*，选择 **“计划”** 连接器，然后选择 **“定期”** 触发器。
+3. 搜索*“定期”*，选择 **“计划”** 连接器，然后选择 **“定期”** 触发器。
 
 4. 将 **“间隔”** 设置为 **“15 分钟”**
 
-5. 单击 **“新建步骤”**。 搜索 *“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。选择 **“列出记录”** 操作。
+5. 单击 **“新建步骤”**。搜索 *“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。选择 **“列出行”** 操作。
 
-   * 输入 **“访问”** 作为 **“实体名称”**
+   * 输入 **“Visits”** 作**为表名称**
    
    * 单击 **“显示高级选项”**
 
-   * 输入以下表达式作为 **“过滤器查询”**
+   * 输入以下表达式作为 **“筛选行”**
 
    ```
      statecode eq 0 and bc_actualstart ne null and bc_actualend eq null and Microsoft.Dynamics.CRM.OlderThanXMinutes(PropertyName='bc_scheduledend',PropertyValue=15)
@@ -204,9 +204,9 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
     
     * 搜索 *“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。 
     
-    * 选择 **“获取记录”** 操作。
+    * 选择 **“按 ID 获取行”** 操作。
     
-    * 选择 **“建筑”**  作为 **“实体名称”**
+    * 选择 **“建筑物”** 作为 **“实体名称”**
     
     * 从动态内容中选择 **“建筑物（值）”** 作为 **“项目 ID”**
     
@@ -218,7 +218,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
     
     * 搜索 *“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。
     
-    * 选择 **“获取记录”** 操作。
+    * 选择 **“按 ID 获取行”** 操作。
     
     * 选择 **“联系人”** 作为 **“实体名称”**
     
@@ -232,20 +232,20 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
 12.  在 **“收件人”** 部分输入你的电子邮件地址
 
-13.  在 **“主题”** 字段中输入以下内容。**“全名”** 是来自 **“获取访客”** 步骤的动态内容。
+13.  在 **“主题”** 字段中输入以下内容。 **“全名”** 是来自 **“获取访客”** 步骤的动态内容。
 
    ```
-   {Full Name} overstayed their welcome
+   {Full Name} 逗留超时
    ```
    
 14.  在 **“正文”** 字段中输入以下内容。 **“名称”** 是来自 **“获取建筑物”** 步骤的动态内容。
 
    ```
-   There is an overstay in building {Name}
+   建筑物 {Name} 中有人逗留。
          
-   Best,
+   此致，
          
-   Campus Security
+   校园安全处
    ```
 
 17.  选择左上角的流名称 **“无标题”**，并将其重命名为 **“安全扫描”**
@@ -254,7 +254,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
     流看起来应大致如下：
 
-![安全扫描计划流第 1 部分](media/4-power-automate-security-sweep.png)
+![安全扫描计划流第 1 部分](media/4-power-automate-security-sweep-flow.png)
 
 ## 任务 #2：验证并测试流
 
@@ -268,21 +268,21 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
    
    3. “实际开始时间”有一个值。
    
-   > **注意**：要查看此数据，请在新选项卡中导航到 make.powerapps.com。单击左窗格上的“解决方案”，找到你的解决方案。选择“访问”实体，然后选择“数据”选项卡。单击右上角的“有效访问”以显示视图选择器，然后选择“全部”字段。
+   > **备注**： 要查看此数据，请在新选项卡中导航到 make.powerapps.com。单击左窗格上的“解决方案”，找到你的解决方案。选择“访问”实体，然后选择“数据”选项卡。单击右上角的“有效访问”以显示视图选择器，然后选择“全部”字段。
    
-2. 导航到你的解决方案，找到 **“安全扫描”** 流。单击 **“...”**，然后单击 **“编辑”**。
+2. 导航到 **“安全扫描”** 流（如果尚不存在）。
 
 3. 当流打开时，单击 **“测试”**。
 
-4. 选择 **“我将执行触发器操作”**。
+4. 选择 **“手动”**。
 
-5. 单击 **“测试”** 和 **“运行流”**。
+5. 单击 **“保存并测试”** 和 **“运行流”**。
 
-6. 当流完成时，请单击 **“完成”**。 
+6. 当流完成时，单击 **“完成”**。 
 
 7. 展开 **“应用到每一个”**，然后展开 **“发送电子邮件通知”** 步骤。检查 **“主题”** 和 **“电子邮件正文”** 的值。
 
-8. 导航到解决方案，单击流旁边的 **“...”**，选择 **“关闭”**。这是为了防止流按计划在测试系统上执行。
+8. 选择返回箭头以查看“安全扫描”流的详细信息。选择命令栏上的 **“关闭”**。这是为了防止流按计划在测试系统上执行。
 
 # 挑战
 

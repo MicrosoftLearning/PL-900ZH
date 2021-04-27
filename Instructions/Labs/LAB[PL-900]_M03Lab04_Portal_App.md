@@ -1,23 +1,23 @@
----
+﻿---
 lab:
     title: '实验室 5：如何构建 Power Apps 门户'
-    module: '模块 3： Power Apps 入门'
+    module: '模块 3：Power Apps 入门'
 ---
 
-# 模块 3： Power Apps 入门
+# 模块 3：Power Apps 入门
 
 ## 实验室 4：如何构建 Power Apps 门户
 
-### 重要通知（2020 年 11 月起生效）：
-Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中的一些术语已更新。例如，“实体”现已更新为“表”。Dataverse 数据库中的“字段”和“记录”现在称为“列”和“行”。
+### 重要通知（2020 年 11 月生效）：
+Common Data Service 已重命名为 Microsoft Dataverse。Microsoft Dataverse 中的一些术语已更新。例如，实体现在更新为了表。Dataverse 数据库中的字段和记录现在称为列和行。
 
-虽然应用程序正在更新其用户体验，但对一些 Microsoft Dataverse 术语（例如“实体”（现在为“表”）、“字段”（现在为“列”）和“记录”（现在为“行”））的引用已过期。请在完成实验室时记住这一点。我们希望很快就能完全更新我们的内容。 
+在应用程序更新其用户体验期间，对实体（现在是**表**）、字段（现在是**列**）和记录（现在是**行**）等 Microsoft Dataverse 术语的一些引用可能已过时。请在执行实验室操作时谨记这一点。我们预期将在不久之后更新全部内容。 
 
-有关详细信息和受影响术语的完整列表，请访问 [Microsoft Dataverse 是什么？](https://docs.microsoft.com/zh-cn/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
+有关详细信息以及受影响术语的完整列表，请访问[什么是 Microsoft Dataverse？](https://docs.microsoft.com/zh-cn/powerapps/maker/common-data-service/data-platform-intro#terminology-updates)
 
 # 应用场景
 
-贝洛斯学院 (Bellows College) 是一所教育机构，校园内有多座建筑。目前，校园访问记录在纸质日报上。无法始终如一地捕获信息，也无法收集和分析有关整个校园的访问数据。
+Bellows College 是一所教育机构，校园内有多座建筑。目前，校园访问记录在纸质日报上。无法始终如一地捕获信息，也无法收集和分析有关整个校园的访问数据。
 
 校园管理部门希望向访问者提供有关校园建筑物的信息。访问者将能够在网站上查看建筑物列表，该网站将使用 Power Apps 门户进行构建。
 
@@ -27,14 +27,14 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
 将按照以下大纲设计 Power Apps 门户：
 
-* 在 Common Data Service 环境中预配 Power Apps 门户
+* 在 Dataverse 环境中预配 Power Apps 门户
 * 创建并配置网页以显示建筑物列表
 * 新建主题并将其应用于门户
 
 ## 前提条件
 
-* 完成**模块 0 实验 0 - 验证实验室环境**
-* 完成**模块 2 实验 1 - Common Data Service 简介**
+* 完成 **“模块 0 实验室 0 - 验证实验室环境”**
+* 完成 **“模块 2 实验室 1 - Microsoft Dataverse 简介”**
 
 ## 开始前要考虑的事项
 
@@ -42,19 +42,21 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
 # 练习 \#1：创建门户网页
 
-**目标：** 在本练习中，你将创建一个新的网页，其中将显示一些静态内容以及 Common Data Service 中的建筑物列表。
+**目标：**在本练习中，你将创建一个新的网页，其中将显示一些静态内容以及 Dataverse 中的建筑物列表。
 
 ## 任务 \#1：导航到门户
 
 1.  导航至 <https://make.powerapps.com>。
 
-2.  单击 **“应用”**
+2.  验证自己是否处于练习环境中。如果不是，请更改右上角的环境。
 
-3.  找到 **“类型”** 为 **“门户”** 的应用
+3.  单击 **“应用”**
 
-4.  单击应用名称以打开门户
+4.  找到 **“类型”** 为 **“门户”** 的应用
 
-    > 系统会将你重定向到带有欢迎消息的门户网站登陆页面
+5.  单击应用名称以打开门户
+
+    > 系统会将你重定向到带有欢迎消息的门户网站登陆页面浏览门户，查看在预配门户时默认创建的内容。 
 
 ## 任务 \#2：创建网页
 
@@ -68,7 +70,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
     -   单击门户应用名称右侧的省略号 (**...**)，然后选择 **“编辑”**
 
-你现在位于 Power Apps 门户 Studio 中。你可以在此处修改和创建门户内容。
+    > 你现在位于 Power Apps 门户 Studio 中。你可以在此处修改和创建门户内容。
 
 2.  创建新页面
 
@@ -138,15 +140,17 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
     
 2.  向“Building Directory”页面添加列表组件
 
+    -   选择具有两个列的部分。
+
     -   在工具带（左侧）上，选择 **“组件”** 图标
 
-    -   从 **“节布局”** 区域选择 **“一列节”**（网页上图片和文字下方会出现一个部分）
+    -   从 **“节布局”** 区域选择 **“一列节”** （网页上图片和文字下方会出现一个部分）
 
     -   在画布上选择新的列节
 
     -   在工具带（左侧）上，选择 **“组件”** 图标
 
-    -   从 **“门户组件”** 区域选择 **“列表”**（列表组件将出现在新节中）
+    -   从 **“门户组件”** 区域选择 **“列表”** （列表组件将出现在新节中）
     
 3.  配置列表组件
 
@@ -154,7 +158,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
     -   在属性窗格（右侧）中，在 **“名称”** 字段中输入 `Buildings List`
 
-    -   在 **“实体”** 字段中，从下拉列表中选择 **“Building (bc_building)”**
+    -   在 **“表”** 字段中，从下拉列表中选择 **“建筑物(bc_building)”**
 
     -   在 **“视图”** 中，选择 **“可用建筑物”**
 
@@ -162,7 +166,7 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
     
 4.  单击 **“浏览网站”** 以查看页面。 
 
-    > 你应该会在网页上看到 Common Data Service 中的建筑物列表。
+    > 你应会看到 Dataverse 数据库中的建筑物列表出现在网页上。
 
 # 练习 \#2：更改门户主题
 
@@ -202,6 +206,6 @@ Common Data Service 已更名为 Microsoft Dataverse。Microsoft Dataverse 中�
 
 * 创建一个不同的仅显示建筑物名称的建筑物视图。你将需要在门户 Studio 中选择 **“浏览网站”** 以查看更改。
 * 在工具带上，单击 **“主题”** 图标，然后编辑自定义主题的 CSS。
-* 用 **“表单”** 组件创建一个页面，并修改一个 **“列表”** 组件来添加或编辑带有表单的 Common Data Service 记录。
+* 使用 **“表单”** 组件创建一个页面，并修改 **“列表”** 组件以使用该表单添加或编辑 Dataverse 行。
 * 在 **“列表”** 组件 **“设置”** 中 中启用 **“实体权限”**，数据有何变化？
-* 在门户 Studio 中，选择“源代码编辑器”图标 `</>` 查看页面源。如果你熟悉 HTML，请进行一些修改并查看结果。
+* 在门户 Studio 中，选择“源代码编辑器”图标 `</> ` 查看页面源。如果你熟悉 HTML，请进行一些修改并查看结果。

@@ -45,7 +45,7 @@ Bellows College 是一所教育机构，校园内有多座建筑。当前，校�
 
 # 练习 \#1：创建访问通知流
 
-**目标：**在本练习中，你将创建一个实现要求的 Power Automate 流。应向访客发送一封电子邮件，其中包含分配给访问的唯一代码。
+**目标：** 在本练习中，你将创建一个实现要求的 Power Automate 流。应向访客发送一封电子邮件，其中包含分配给访问的唯一代码。
 
 ## 任务 \#1：创建流
 
@@ -61,7 +61,7 @@ Bellows College 是一所教育机构，校园内有多座建筑。当前，校�
 
 2.  单击 **“新建”**，然后选择 **“云流”**。这将在新窗口中打开 Power Automate 流编辑器。
 
-3. 搜索*“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。
+3. 搜索 *“当前”*，然后选择 **“Common Data Service（当前环境）”** 连接器。
 
 4. 选择触发器 **“创建、更新或删除记录时”**。
 
@@ -87,7 +87,7 @@ Bellows College 是一所教育机构，校园内有多座建筑。当前，校�
 
 8. 单击 **“新建步骤”**。这是创建并向访客发送电子邮件的步骤。
 
-9. 搜索*“邮件”*， 选择 **“邮件”** 连接器和 **“发送电子邮件通知”** 操作 
+9. 搜索 *“邮件”*， 选择 **“邮件”** 连接器和 **“发送电子邮件通知”** 操作 
 
    * 如果要求接受使用此操作的条款和条件，请单击 **“接受”**。
    
@@ -100,16 +100,16 @@ Bellows College 是一所教育机构，校园内有多座建筑。当前，校�
         > 需将动态内容置于方括号中命名字段的位置。建议先复制并粘贴所有文本，然后在正确的位置添加动态内容。
    
         ```
-        亲爱的 {First Name}，
+        Dear {First Name},
 
-        现已安排你在 {Scheduled Start} 到 {Scheduled End} 期间访问 Bellows 校园。
+        You are currently scheduled to visit Bellows Campus from {Scheduled Start} until {Scheduled End}.
 
-        你的安全代码为 {Code}，请不要与他人共享。你将需要在访问期间出示此代码。
+        Your security code is {Code}, please do not share it. You will be required to produce this code during your visit.
 
-        此致！
+        Best regards,
 
-        校园管理处
-        Bellows 学院
+        Campus Administration
+        Bellows College
         ```
    
 10.  选择顶部的 **“无标题”** 流名称，并将其重命名为 `Visit notification`
@@ -170,7 +170,7 @@ Bellows College 是一所教育机构，校园内有多座建筑。当前，校�
 
 2. 单击 **“新建”**，然后选择 **“云流”**。这将在新窗口中打开 Power Automate 流编辑器。
 
-3. 搜索*“定期”*，选择 **“计划”** 连接器，然后选择 **“定期”** 触发器。
+3. 搜索 *“定期”*，选择 **“计划”** 连接器，然后选择 **“定期”** 触发器。
 
 4. 将 **“间隔”** 设置为 **“15 分钟”**
 
@@ -235,17 +235,17 @@ Bellows College 是一所教育机构，校园内有多座建筑。当前，校�
 13.  在 **“主题”** 字段中输入以下内容。 **“全名”** 是来自 **“获取访客”** 步骤的动态内容。
 
    ```
-   {Full Name} 逗留超时
+   {Full Name} overstayed their welcome
    ```
    
 14.  在 **“正文”** 字段中输入以下内容。 **“名称”** 是来自 **“获取建筑物”** 步骤的动态内容。
 
    ```
-   建筑物 {Name} 中有人逗留。
+   There is an overstay in building {Name}.
          
-   此致，
+   Best,
          
-   校园安全处
+   Campus Security
    ```
 
 17.  选择左上角的流名称 **“无标题”**，并将其重命名为 **“安全扫描”**

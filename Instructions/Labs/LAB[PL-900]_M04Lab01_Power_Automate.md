@@ -252,7 +252,7 @@ Bellows College 是一所教育机构，校园内有多座建筑。当前，校�
 
 18.  按下 **“保存”**
 
-    流看起来应大致如下：
+流看起来应大致如下：
 
 ![安全扫描计划流第 1 部分](media/4-power-automate-security-sweep-flow.png)
 

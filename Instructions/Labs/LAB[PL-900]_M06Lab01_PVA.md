@@ -163,9 +163,9 @@ Bellows College 是一所教育机构，校园内有多座建筑。目前，校�
 
 7.  在 **“对话开场白”** 中输入以下内容：
     ```
-     “谁因新冠肺炎而罹患严重疾病的风险更高”
-     “更严重的疾病意味着什么”
-     “CDC 为应对 COVID-19 正采取哪些行动”
+     “Who is at higher risk for serious illness from COVID-19”
+     “What does more severe illness mean”
+     “What is the CDC doing about COVID-19”
     ```
     
 8.  单击 **“保存”**。

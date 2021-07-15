@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 3：如何生成画布应用，第 2 部分'
     module: '模块 3：Power Apps 入门'

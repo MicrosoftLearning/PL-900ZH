@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '实验室 6：如何生成自动解决方案'
     module: '模块 4：Power Automate 入门'
